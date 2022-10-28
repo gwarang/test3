@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: testweb
-        image: 192.168.8.100:5000/testweb:blue
+        image: 192.168.8.100:5000/testweb:green
 ---
 apiVersion: v1
 kind: Service

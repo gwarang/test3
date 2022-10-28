@@ -26,3 +26,4 @@ spec:
       targetPort: 80
   selector:
     color: blue
+  type: NodePort

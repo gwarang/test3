@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: testweb
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      color: blue
+  template:
+    metadata:
+      labels:
+        color: blue
+    spec:
+      containers:
+      - name: testweb
+        image: 192.168.8.100:5000/testweb:blue
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: testweb-svc
+spec:
+  ports:
+    - port: 80
+      targetPort: 80
+  selector:
+    color: blue
